@@ -1,43 +1,35 @@
 
 /////////// Game functions //////////////
 
-// I need a deal function deals two to the player 
+// I need a deal function deals two to the player // Have this 
 
-// going to need a dealers deal function 
+// going to need a dealers deal function // Have the first stage of this 
 
-// I need a hit function // draw card function 
+// I need a hit function // draw card function // Working on this 
 
-// I need a sit function // pass card function that then playes out the dealers hand 
+// I need a sit function // pass card function that then playes out the dealers hand // Need this
 
-// I need a new game function 
+// I need a new game function // Working on this 
 
-// I need a shuffle function 
+// I need a shuffle function // Dont need this as all randomised cards 
 
-// Need to have a winner function 
-
-
+// Need to have a winner function // Prototyped // Working at the moment
 
 
 /////////// data shit ///////////////////
 
 
+// I need a way to store card data // Auto generated currently 
 
+// I need a way to be able to store hand data // player and dealer score // Still need to be able to update these 
 
-// I need a way to store card data 
+// I need a score function // Working on this once i get past being able to add the scores into each other 
 
-// I need a way to be able to store hand data
+// i need a way to store the score and display it // Have this // scoreboard does update if called in the console
 
-// I need a score function 
+// I need a way to update the score on screen // this works currently 
 
-// i need a way to store the score and display it 
-
-// I need a way to update the score on screen 
-
-// I need a score board 
-
-// need a player account to add money too // reference the bank functions you wrote 
-
-
+// need a player account to add money too // reference the bank functions you wrote // can use the html for this as that will work and its only a novelty part of the game 
 
 
 
@@ -49,6 +41,11 @@
 
 // could have the dealer say random shit to you like 'good fucking luck' and other abusive shit'
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// H A C K  J A C K //////////////////////////////////////
+/////////////////////////////// F U C K  Y E A H //////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 
 // This is the function to generate a random suit // This works
@@ -112,42 +109,73 @@ var dealDealerBox1 = function(card1){
 	$('#dCard1').html(card1);	
 };
 
-// This is the function to draw another card
+
+var dealerLastCards = function(){
+
+// This needs to deal the reamaining cards to the dealer until its a bust // beats the player // standoff // at the end of this it needs to update the dealer score so the winner fucntion can run
+
+};
+
+// This is the function to draw another card for the player
 
 var draw1 = function(){
 	card3 = randomTotalCard();
 	$('#card3').html(card3);	
-};
 
-
-var winner = function(){
+// Still need to get this to update to the new id of the next card div // Also needs to stop at the last id and then run the reamainging dealer deal
 
 };
 
+// Need to score the hands 
 
-// need to score the hands 
+// Player scoring 
 
-var recordScore = function(){
-	
+var playerScore = 1;
+
+var ScorePlayer = function(){
+
+// need to get this to add the total of the final hand of the player to beat the dealer // determine an early bust // or draw // this needs to update the overall playerscore
+
 };
 
-var playerScore = [];
+// Dealer scoring
 
-var dealerScore = [];
+var dealerScore = 0;
+
+var scoreDealer = function(){
+
+// This needs to count the dealers hands and count to a win to either beat the player // bust or draw // This also needs to updates the overall dealer score so the winner function can run
+
+};
+
+// Need to be able to amend the cash from the input field as a bet to the html 
+
+var bet = function(){
+
+// This needs to run on a win or a loss and needs to be called from inside the winner function
+// This needs to use parseint // needs to update the dom html also 
+
+};
+
+
 
 
 // Need to make the win conditions 
 
-var dealerScoreBoard = 0;
-var playerScoreBoard = 0;
+// var dealerScoreBoard = 0;
+// var playerScoreBoard = 0;
 
 var winner = function(){
+	var playerScoreBoard = 0;
+	var dealerScoreBoard = 0;
+
 	if (dealerScore > playerScore){
 		alert('Dealer won the hand fucker!');
 		dealerScoreBoard ++;
+		console.log(dealerScoreBoard)
 		$('#dealerScore').html(dealerScoreBoard);
 		return dealerScoreBoard
-	} else if (playerScore > dealerScore){
+	} 	else if (playerScore > dealerScore){
 		alert('Player won the hand! FUCK YEAH');
 		playerScoreBoard ++;
 		$('#playerScore').html(playerScoreBoard);
@@ -162,11 +190,11 @@ var winner = function(){
 
 // This is the sit function // it needs to respond to the button // 
 
+var sit = function(){
 
+// This needs to call the scorePlayer function and update the player score variable so the winner function can run
 
-
-
-
+};
 
 
 
@@ -182,6 +210,7 @@ $(document).ready(function(){
 	});
 	$('#hit').click(function(){
 		draw1(this)
+		winner();
 	});
 });
 
