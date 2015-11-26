@@ -7,4 +7,4 @@ With its succes I'll be trying to run game nights at GA as a result.
 
 Fucking yeah! 
 
-(total balcjack pun in the naming of this .md)
+(total black jack pun in the naming of this .md)
