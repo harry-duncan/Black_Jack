@@ -50,15 +50,6 @@
 // could have the dealer say random shit to you like 'good fucking luck' and other abusive shit'
 
 
-// Going to try and get this working for one suit
-
-
-
-// Starting with making objects for my card suits and cards // need to work these into a deck
-
-// Variables 
-
-newHand = [];
 
 // This is the function to generate a random suit // This works
 
@@ -108,6 +99,7 @@ var dealPlayerBox2 = function(card2){
 	$('#card2').html(card2);	
 };
 
+// need to make this hidden once pressed 
 var dealPlayer = function(){
 	dealPlayerBox1();
 	dealPlayerBox2();
@@ -128,6 +120,47 @@ var draw1 = function(){
 };
 
 
+var winner = function(){
+
+};
+
+
+// need to score the hands 
+
+var recordScore = function(){
+	
+};
+
+var playerScore = [];
+
+var dealerScore = [];
+
+
+// Need to make the win conditions 
+
+var dealerScoreBoard = 0;
+var playerScoreBoard = 0;
+
+var winner = function(){
+	if (dealerScore > playerScore){
+		alert('Dealer won the hand fucker!');
+		dealerScoreBoard ++;
+		$('#dealerScore').html(dealerScoreBoard);
+		return dealerScoreBoard
+	} else if (playerScore > dealerScore){
+		alert('Player won the hand! FUCK YEAH');
+		playerScoreBoard ++;
+		$('#playerScore').html(playerScoreBoard);
+	} else if (playerScore === 10){
+		alert('Player beat the HOUSE, click new game to start again!');
+	}
+};
+
+
+
+
+
+// This is the sit function // it needs to respond to the button // 
 
 
 
@@ -136,13 +169,16 @@ var draw1 = function(){
 
 
 
+
+
+// Document ready spot
 
 
 $(document).ready(function(){
 	$('#deal').click(function(){
 		dealPlayer(this);
 		dealDealerBox1(this);
-		click.preventDefault();
+		$("#deal").hide(); // added this to hide the button after click 
 	});
 	$('#hit').click(function(){
 		draw1(this)
