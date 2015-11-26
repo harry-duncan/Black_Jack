@@ -30,6 +30,7 @@
 .gamerinterface {
 	text-align: center;
 	padding-top: 35px;
+	font-family: 'Oxygen', sans-serif;
 }
 h1 {
 	color: rgba(174,99,228,1);
@@ -91,12 +92,14 @@ h1 {
 .newgame {
 	position: absolute;
 	right: 150px;
+	font-family: 'Oxygen', sans-serif;
 }
 
 h2 {
 	padding: 0;
 	margin: 0 auto;
 	padding-bottom: 25px;
+	font-family: 'Oxygen', sans-serif;
 }
 
 h4 {
@@ -105,12 +108,15 @@ h4 {
 	padding-right: 80px;
 	padding-bottom: 15px;
 	padding-top: 5px;
+	font-family: 'Oxygen', sans-serif;
 }
 
 p {
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 15px;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 10px;
 }
 
 .cash {
