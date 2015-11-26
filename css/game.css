@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+/*	color: rgba(174,99,228,1);
+	letter-spacing: 20px;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 1em;
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(174,99,228,1);
+	padding-bottom: 100px;
+}
+
+.board {
+	border: 1px solid red;
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.buttons {
+	text-align: center;
+	padding-top: 35px;
+}
+h1 {
+	color: rgba(174,99,228,1);
+	letter-spacing: 2px;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 1em;
+	text-align: center;
+}
