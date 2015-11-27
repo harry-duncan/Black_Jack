@@ -127,7 +127,14 @@ p {
 }
 
 
+.winner {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	font-size: 30px;
+	color: red;
 
+}
 
 
 
